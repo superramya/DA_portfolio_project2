@@ -69,16 +69,17 @@ WHERE sales_amount <= 0;
 
 ### Analysis Findings/Results
 
-Note - Currency is represented in Indian Rupees.
+Note: The currency used in the analysis is represented in Indian Rupees.
 
-1. Below are the findings of Revenue contribution and Profit contribution of all the markets, customerss and products in 2020. Also, it shows the revenue trend of the year 2020 as an example.
-   Although Revenue contribution of Delhi market is high, Profit contribution of mumbai market is at the top. Profit margin is higher for Bhubaneshwar market.
-
-
+1. Here are the findings for the revenue contribution and profit contribution of all markets, customers, and products in 2020. Additionally, the revenue trend for the year 2020 is illustrated.
+   Despite the high revenue contribution of the Delhi market, the Mumbai market leads in profit contribution. Furthermore, the Bhubaneshwar market exhibits a higher profit margin.
 
 
-2. The visualization shows the Profit margin of each zone, list of customers table to find out the top and bottom customers and a revenue trend comparing profits of two years 2020 and its previous year.
-   South zone has the hight profit margin whereas North has the lowest. Revenue trend shows that the sales profits were decreased from 2019 to 2020. 
+
+
+2. a) A bar chart illustrating the profit margin of each zone, indicating that the South zone has the highest profit margin while the North zone has the lowest.
+   b) A table displaying the list of customers, allowing for the identification of both top and bottom customers based on revenue.
+  c) A revenue trend graph comparing profits from the years 2020 and its previous year (2019), indicating a decrease in sales profits from 2019 to 2020.
 
   
 
