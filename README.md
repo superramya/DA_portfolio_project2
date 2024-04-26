@@ -75,7 +75,7 @@ Note: The currency used in the analysis is represented in Indian Rupees.
    Despite the high revenue contribution of the Delhi market, the Mumbai market leads in profit contribution. Furthermore, the Bhubaneshwar market exhibits a higher profit margin.
 
 
-     <img src="Profit margin Insights.png" width="450" />
+     <img src="Profit margin Insights.png" width="500" />
 
 
 2. a) A bar chart illustrating the profit margin of each zone, indicating that the South zone has the highest profit margin while the North zone has the lowest.
@@ -83,7 +83,7 @@ Note: The currency used in the analysis is represented in Indian Rupees.
   c) A revenue trend graph comparing profits from the years 2020 and its previous year (2019), indicating a decrease in sales profits from 2019 to 2020.
 
 
-   <img src="Performance Insights.png" width="450" />
+   <img src="Performance Insights.png" width="500" />
 
 ### Recommendations
 
@@ -100,5 +100,5 @@ Note: The currency used in the analysis is represented in Indian Rupees.
 ### References
 
 1. Code Basics online platform [Codebasics website](https://codebasics.io/))
-2. MySQL
+2. [MySQL](https://www.mysql.com/)
 
