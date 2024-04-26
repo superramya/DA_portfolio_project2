@@ -15,17 +15,17 @@
 
 ### Project Overview
 
-The goal of this project is to analyze sales data of an organization which supplies various hardware equipment to different regions/states across India. The primary objectives of the project is to identify which region has the highest profits and how the sales trend look like for each passing year.
-This data analysis project focuses on various sales data aspects which help in determining data insights, identifying trends and patterns to make data-driven recommendations.
+The objective of this project is to analyze the sales data of a company that supplies hardware equipment to different stores/customers across India. The main goals are to determine which region yields the highest profits and to examine the sales trends over the years.
+This data analysis project is centered around exploring various aspects of sales data to uncover insights, detect trends, and identify patterns. The findings from this analysis will inform data-driven recommendations for the organization.
 
 ### Data Sources
 
-Data is taken from a platform called Code basics, an online data analysis teaching website. MySQL file is attached above.
+The data for this project has been sourced from Code Basics, an online data analysis/science teaching platform. The dataset is stored in a MySQL file, which is included above as () for reference.
 
 ### Tools
 
 - SQL server - Data analysis
-- Power Query and Power BI - Data cleaning, Data transformation and Visualizations
+- Power Query and Power BI - Data cleaning, Data transformation, Visualizations and Interactive dashboards
 
 ### Data cleaning/Preparation
 
@@ -35,38 +35,50 @@ In the first stage, below are taken care:
 
 ### Exploratory Data Analysis
 
-In this process, need to find out the answers to below questions:
+In this process, the following questions need to be answered:
 
-- What is the Revenue contribution?
-- What is the Profit contribution?
-- Are there any trends or patterns that tell us the rise or fall of the rides?
-- How was the trend on an average day of the week?
+1. What is the contribution of revenue?
+2. What is the contribution of profit?
+3. Who are the top customers based on revenue and profit margin?
+4. What is the profit margin in each zone?
 
 ### Data Analysis
 
-Data is analysed in excel using functions like average, max and percentage etc. and as a part of analysis pivot tables are created for the summary.
-Analysis is viewed through SQL(wrote a few queries), an example below:
+Data is analysed in SQL using different queries to know the insights of the data like how particular market is doing or how the sales in a certain year look like.
+Analysis is viewed through SQL, examples as below:
 
 ```sql
-SELECT member_casual, day_of_week, COUNT(ride_id) as total_rides
-FROM biketrip_jandata
-GROUP BY member_casual, day_of_week;
+SELECT count(*)
+FROM sales.transactions
+JOIN sales.date
+ON sales.transactions.order_date = sales.date.date
+WHERE year = 2020;
 ```
+```sql
+SELECT SUM(sales.transactions.sales_amount)
+FROM sales.transactions
+JOIN sales.date
+ON sales.transactions.order_date = sales.date.date
+WHERE sales.date.year = 2020 and sales.transactions.market_code = "Mark001";
+```
+```sql
+SELECT *
+FROM sales.transactions
+WHERE sales_amount <= 0;
+```
+
 ### Analysis Findings/Results
 
-1. Though the annual members were the highest number of customers(shown in Image1) for the company in 2023, casual riders are riding the longest(shown in Image2).
+Note - Currency is represented in Indian Rupees.
+
+1. Below are the findings of Revenue contribution and Profit contribution of all the markets, customerss and products in 2020. Also, it shows the revenue trend of the year 2020 as an example.
+   Although Revenue contribution of Delhi market is high, Profit contribution of mumbai market is at the top. Profit margin is higher for Bhubaneshwar market.
 
 
 
 
-
-2. Casual riders renting the most bikes during weekends while members do it on weekdays.
-
-
-
-   
-3. Bike trips tend to rise between Quarter2 and Quarter3 .
-
+2. The visualization shows the Profit margin of each zone, list of customers table to find out the top and bottom customers and a revenue trend comparing profits of two years 2020 and its previous year.
+   South zone has the hight profit margin whereas North has the lowest. Revenue trend shows that the sales profits were decreased from 2019 to 2020. 
 
   
 
@@ -74,18 +86,18 @@ GROUP BY member_casual, day_of_week;
 
 ### Recommendations
 
-1. Can initiate a marketing campaign to convert casual riders into members considering their ride time.
-2. Any special offers or benefits on the membership can be implemented during weekends.
-3. Accomodating more resources like bikes, docked stations and staff during Q2 and Q3.
+1. It is advisable to monitor and address the discrepancy between revenue and profit in markets like Delhi, where the revenue significantly outweighs the profit. Taking corrective action in these markets could help improve profitability.
+2. Implementing a strategy to identify and reward top customers with special offers or discounts can enhance customer retention and foster long-term relationships with key clients.
+3. Given the declining profits, it is essential to investigate the underlying factors that may have contributed to this trend, such as changes in sales strategies or shifts in customer relationships. Identifying and addressing these changes can help steer the company back towards profitability.
 
 ### Limitations
 
-1. I removed the blank values of start and end station columns because it would affect the accuracy of the insights.
-2. A bike type called docked_bike for casual riders was found only for the first 3 Quaters and it is missing for the last quarter and also it does not show the docked_bike data for the annual members, because of the lack of data and to maintain accuracy, the variable was not taken into account in the analysis. Also, this variable has outliers as its range is way out of the other bike types.
-3. Individual datasets are large and saved in .csv which has become hard to combine, so analysis has been performed separately and the summary of the data has been merged . You can find individual sheets in  .
+1. Certain foreign markets have been excluded from the analysis as their contribution to sales insights is minimal.
+2. The dataset contains product codes, but there is no accompanying data for product names, making it challenging to identify the top-selling products. Additionally, some product codes are missing, yet they are still generating significant revenue.
+3. The sales data includes transactions denominated in USD, which have been converted to Indian Rupees. However, there is a need for more precise conversion to determine the exact value of the Indian Rupees corresponding to the specific date or time of the transactions.
 
 ### References
 
-1. Google Data analytics certification capstone project in Coursera
-2. SQL - [SQL learnings](https://www.w3schools.com/sql/sql_syntax.asp)
+1. Code Basics online platform [Codebasics website](https://codebasics.io/))
+2. MySQL
 
