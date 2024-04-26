@@ -20,7 +20,7 @@ This data analysis project is centered around exploring various aspects of sales
 
 ### Data Sources
 
-The data for this project has been sourced from Code Basics, an online data analysis/science teaching platform. The dataset is stored in a MySQL file, which is included above as (db_dumb_version 2) for reference.
+The data for this project has been sourced from Code Basics, an online data analysis/science teaching platform. The dataset is stored in a MySQL file, which is included above as (db_dumb_version_2.sql) for reference.
 
 ### Tools
 
@@ -75,7 +75,7 @@ Note: The currency used in the analysis is represented in Indian Rupees.
    Despite the high revenue contribution of the Delhi market, the Mumbai market leads in profit contribution. Furthermore, the Bhubaneshwar market exhibits a higher profit margin.
 
 
-  <img src="images/Profit margin Insights.png" width="405" />
+     <img src="Profit margin Insights.png" width="405" />
 
 
 2. a) A bar chart illustrating the profit margin of each zone, indicating that the South zone has the highest profit margin while the North zone has the lowest.
@@ -83,7 +83,7 @@ Note: The currency used in the analysis is represented in Indian Rupees.
   c) A revenue trend graph comparing profits from the years 2020 and its previous year (2019), indicating a decrease in sales profits from 2019 to 2020.
 
 
-   <img src="images/Performace Insights.png" width="405" />
+       <img src="Performace Insights.png" width="405" />
 
 ### Recommendations
 
